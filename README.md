@@ -1,5 +1,7 @@
 # JAVA
 
+
+
 public class arrayTest {
 
 	public static int maxValue(int[] arr) {
@@ -22,14 +24,11 @@ public class arrayTest {
 		return min_num;
 	}
 	
-	
-	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] arr = new int[] {3,4,1,6,5,2};
 		System.out.println(maxValue(arr));  //최댓값출력
 		System.out.println(minValue(arr));  //최솟값출력
-
 	}
-
 }
+
