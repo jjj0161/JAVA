@@ -1,6 +1,6 @@
 # JAVA
 
-
+//배열에 저장된 원소의 최솟값과 최댓값을 반환해주는 메소드
 
 public class arrayTest {
 
