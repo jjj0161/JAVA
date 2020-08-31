@@ -1,0 +1,54 @@
+//두 개의 1차원 배열을 입력받고 n번째 행의 길이가 n인 2차원 배열 만들기
+import java.util.Scanner;
+
+public class arraryTest3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("배열 1 : ");
+		String str1 = sc.nextLine();
+		String[] arr1_str = str1.split(" ");
+
+		System.out.print("배열 2 : ");
+		String str2 = sc.nextLine();
+		String[] arr2_str = str2.split(" ");
+
+		int[] arr1 = new int[arr1_str.length + arr2_str.length];
+
+		for (int i = 0; i < arr1_str.length; i++) {
+			arr1[i] = Integer.parseInt(arr1_str[i]);
+		}
+		for (int i = 0; i < arr2_str.length; i++) {
+			arr1[arr1_str.length + i] = Integer.parseInt(arr2_str[i]); /*
+																		 * arr1[0]~arr1[9]까지 값 대입
+																		 */
+		}
+		int count = 0;
+		int row = 1;
+		while (count < arr1.length) {
+			row++;
+			count += row;
+		}
+		int[][] arr2 = new int[row][];
+		count = 0;
+
+		for (int i = 0; i < row; i++) {
+			arr2[i] = new int[i + 1];
+			for (int j = 0; j < i + 1; j++) {
+				if (count < arr1.length) {
+					arr2[i][j] = arr1[count];
+				}
+				count++;
+			}
+		}
+		System.out.println("합친배열 >>");
+		for (int[] sub_arr : arr2) {
+			for (int e : sub_arr) {
+				System.out.print(e + " ");
+			}
+			System.out.println();
+		}
+	}
+}
