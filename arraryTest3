@@ -21,10 +21,10 @@ public class arraryTest3 {
 			arr1[i] = Integer.parseInt(arr1_str[i]);
 		}
 		for (int i = 0; i < arr2_str.length; i++) {
-			arr1[arr1_str.length + i] = Integer.parseInt(arr2_str[i]); /*
-																		 * arr1[0]~arr1[9]까지 값 대입
-																		 */
+			arr1[arr1_str.length + i] = Integer.parseInt(arr2_str[i]);     /* arr1[0]~arr1[9]까지 값 대입 */
 		}
+		
+		
 		int count = 0;
 		int row = 1;
 		while (count < arr1.length) {
