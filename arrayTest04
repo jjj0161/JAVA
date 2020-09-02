@@ -1,0 +1,29 @@
+//공백을 포함한 문자열을 입력받는다 - 공백으로 문자열을 분리하여 번호와 함께 출력하는 프로그램 작성
+//Enter the sentence : My name is ~ ~
+//1. My
+  2. name 
+  3.  .
+     ~
+
+import java.util.Scanner;
+
+public class arrayTest04 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter the Sentence: ");
+		String str = sc.nextLine();
+		
+		String[] arr_str = str.split(" ");
+		
+		int count = 1;
+		for(String e : arr_str) {
+			System.out.printf("%d. %s",count,e);
+			count++;
+			System.out.println();
+		}
+	}
+
+}
