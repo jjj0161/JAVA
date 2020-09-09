@@ -1,0 +1,41 @@
+/*(n X n 행렬) 
+  1  6  7
+  2  5  8     <= 형태로 출력되도록
+  3  4  9 */
+import java.util.Scanner;
+public class arrayTest05 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter The Number : ");
+		int n = sc.nextInt();
+		
+		int[][] arr = new int[n][n];
+		int count =1;
+		
+		
+		for(int i = 0; i < n; i++) {
+			if(i % 2 == 0) {
+				for(int j = 0; j < n; j++) {
+					arr[j][i] = count;
+					count++;
+				}
+			}
+			else {
+				for(int j = n-1; j>=0; j--) {
+					arr[j][i] = count;
+					count++;
+				}
+			}
+		}
+		for(int i = 0; i < n; i++) {
+			for(int j = 0; j < n; j++) {
+				System.out.printf("%2d",arr[i][j]);
+			}
+			System.out.println();
+		}
+		
+	}
+}
